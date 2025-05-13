@@ -4,30 +4,28 @@ Input: D   Output:FALSE
 
 */
 #include<stdio.h>
-typedef int BOOL;
-# define TRUE 1
-# define FALSE 0
+#include<stdbool.h>
 
-BOOL ChkVowel(char cCh)
+bool ChkVowel(char cCh)
 {
     if(cCh=='a' && cCh=='e' && cCh=='i' && cCh=='o' && cCh=='u')
     {
-        return TRUE;
+        return true;
     }
     else
     {
-        return FALSE;
+        return false;
     }
 }
 
 int main()
 {
     char cValue = '\0';
-    BOOL bRet = FALSE;
+    bool bRet = false;
     printf("Enter character\n");
     scanf("%c", &cValue);
     bRet=ChkVowel(cValue);
-    if(bRet == TRUE)
+    if(bRet == true)
     {
         printf("It is Vowel");
     }
